@@ -10,20 +10,28 @@ and every false alarm costs somebody a night shift.
 
 ### What I'm building
 
-**[TESSERACT](https://github.com/karakijihad/tesseract)** — a self-hosted personal
-agent runtime for Windows. Long-term memory that consolidates instead of hoarding, a
-research vault kept isolated from memory so retrieval can't contaminate recall, a tool
-registry where every file write and shell command is gated by policy, and an
-orchestration kernel with durable state and crash recovery. Provider-agnostic: which
-model handles which job is a config field, not a rewrite. State is plain Markdown on
-disk, so the agent's memory is auditable and editable by hand.
+**[Trio](https://github.com/karakijihad/trio-cc)** — Claude and Codex reviewing each
+other's work. A model is a poor reviewer of its own code and a good reviewer of somebody
+else's, so Trio runs OpenAI's Codex as a strictly read-only reviewer, `--sandbox
+read-only` hardcoded, not a setting; through five perspectives in parallel: defects,
+security, tests, duplication, and drift between what things claim and what they do.
+Claude then rules on every finding: confirm, refute, downgrade, escalate. Refuting one
+means citing the code that disproves it, because a confident model is not evidence.
 
-**[my-claude-setup](https://github.com/karakijihad/my-claude-setup)** — agent
-governance as a Claude Code plugin. Nine on-demand skills, hooks that block destructive
-shell and SQL operations and scan staged diffs for credential material, and a
-three-tier review ladder where the escalating variable is reviewer *independence*
-rather than effort. Tier 3 routes to a different vendor's model, because a second
-instance of the same model inherits the first one's blind spots.
+A run converges only when nothing critical or major is open *and* nothing new appeared
+that pass. Hit the ceiling instead and it says `ceiling_reached` and lists what's still
+open, it never rounds itself up to clean. Both agents append to one event log and the
+viewer only tails it, so closing the window doesn't touch the run. Secrets are scrubbed
+before anything is written. No credentials shipped, no telemetry, binds localhost only.
+
+**[my-claude-setup](https://github.com/karakijihad/my-claude-setup)** — the governance
+layer that decides when Trio gets called. Nine on-demand skills, hooks that block
+destructive shell and SQL operations and scan staged diffs for credential material, and
+a review ladder whose escalating variable is reviewer *independence* rather than effort:
+the model rereads its own diff, or a fresh agent with no conversation history reviews it,
+or for auth, secrets, payments, migrations and deletions; it goes to Trio and a
+different vendor's model. Because a second instance of the same model inherits the first
+one's blind spots.
 
 **[trio-cc](https://github.com/karakijihad/trio-cc)** — drives OpenAI's Codex as a
 read-only auditor over Claude-authored changes, with each finding adjudicated rather
