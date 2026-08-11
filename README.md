@@ -18,20 +18,13 @@ security, tests, duplication, and drift between what things claim and what they 
 Claude then rules on every finding: confirm, refute, downgrade, escalate. Refuting one
 means citing the code that disproves it, because a confident model is not evidence.
 
-A run converges only when nothing critical or major is open *and* nothing new appeared
-that pass. Hit the ceiling instead and it says `ceiling_reached` and lists what's still
-open, it never rounds itself up to clean. Both agents append to one event log and the
-viewer only tails it, so closing the window doesn't touch the run. Secrets are scrubbed
-before anything is written. No credentials shipped, no telemetry, binds localhost only.
-
-**[my-claude-setup](https://github.com/karakijihad/my-claude-setup)** — the governance
-layer that decides when Trio gets called. Nine on-demand skills, hooks that block
-destructive shell and SQL operations and scan staged diffs for credential material, and
-a review ladder whose escalating variable is reviewer *independence* rather than effort:
-the model rereads its own diff, or a fresh agent with no conversation history reviews it,
-or for auth, secrets, payments, migrations and deletions; it goes to Trio and a
-different vendor's model. Because a second instance of the same model inherits the first
-one's blind spots.
+**[my-claude-setup](https://github.com/karakijihad/my-claude-setup)** — a standing
+operating discipline for Claude Code. Install it once and every repo you open gets the
+same rules: minimum-code discipline, a confirm-first threshold, a fast path for small
+work, a plan when the work is phased enough to earn one, and a mandatory independent
+review at the end of anything that modifies code. Seven protocol references — security,
+testing, git, delegation, feedback, planning, docs — load on demand rather than sitting
+in context permanently. Nine skills, three hooks, three commands.
 
 **[trio-cc](https://github.com/karakijihad/trio-cc)** — drives OpenAI's Codex as a
 read-only auditor over Claude-authored changes, with each finding adjudicated rather
