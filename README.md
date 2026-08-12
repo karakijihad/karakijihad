@@ -22,9 +22,9 @@ means citing the code that disproves it, because a confident model is not eviden
 operating discipline for Claude Code. Install it once and every repo you open gets the
 same rules: minimum-code discipline, a confirm-first threshold, a fast path for small
 work, a plan when the work is phased enough to earn one, and a mandatory independent
-review at the end of anything that modifies code. Seven protocol references — security,
-testing, git, delegation, feedback, planning, docs — load on demand rather than sitting
-in context permanently. Nine skills, three hooks, three commands.
+review at the end of anything that modifies code. Seven protocol references covering security, 
+testing, Git, delegation, feedback, planning, and documentation. Loaded on demand rather than 
+remaining permanently in context. Nine skills, three hooks, and three commands.
 
 **[trio-cc](https://github.com/karakijihad/trio-cc)** — drives OpenAI's Codex as a
 read-only auditor over Claude-authored changes, with each finding adjudicated rather
