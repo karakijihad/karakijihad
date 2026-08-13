@@ -14,13 +14,23 @@ It combines long-term memory that consolidates rather than simply accumulating c
 
 **[my-claude-setup](https://github.com/karakijihad/my-claude-setup)** — a reusable operating discipline for Claude Code across repositories. It defines minimum-code rules, confirmation thresholds, planning and review requirements, security and Git protocols, and hooks that block destructive commands and staged secrets.
 
-**SIGDX** — a condition-monitoring dashboard for metro infrastructure, built independently. Public release pending contractual clearance.
+**SIGDX** — a condition-monitoring dashboard for metro infrastructure, built independently.
 
-**[ProLifter](https://docs.prolifter.app/)** — commercial competition-management software for strength sports, built in C# and Unity and used for real events.
+**[ProLifter](https://docs.prolifter.app/)** — commercial competition-management software for strength sports, built in C# and Unity. Handles competition setup, athlete and attempt management, role-specific live interfaces, results, multi-display operation, and recovery from interrupted competitions.
 
-### Elsewhere
+**[MetaEngineers Metaverse](https://metaverse.metaengineershub.com/)** — an interactive C#/Unity 3D platform for technical and educational experiences, including NLP-based text and voice commands for manipulating the virtual environment. [Documentation](https://metaversedocs.metaengineershub.com/)
 
-* I write at [blog.metaengineershub.com](https://blog.metaengineershub.com/)
+### MetaEngineers Hub
+
+I founded MetaEngineers Hub as a place to build and experiment with engineering, software, and interactive technologies.
+
+* [Platform & technical documentation](https://docs.metaengineershub.com/)
+* [Technical blog](https://blog.metaengineershub.com/)
+* [Metaverse documentation](https://metaversedocs.metaengineershub.com/)
+* [ProLifter documentation](https://docs.prolifter.app/)
+
+### Research & Elsewhere
+
 * Inventor on a filed railway diagnostics patent: IT 102025000030238
 * Published research on rail corrugation monitoring and vibration propagation:
   [Applied Sciences 2023](https://doi.org/10.3390/app13063773) ·
