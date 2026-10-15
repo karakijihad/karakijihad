@@ -14,6 +14,10 @@ It combines long-term memory that consolidates rather than simply accumulating c
 
 **[my-claude-setup](https://github.com/karakijihad/my-claude-setup)** — a reusable operating discipline for Claude Code across repositories. It defines minimum-code rules, confirmation thresholds, planning and review requirements, security and Git protocols, and hooks that block destructive commands and staged secrets.
 
+**[Tara + Public Workshop](https://github.com/tara-assistant/workshop-public)** — an ongoing collaboration with Tara, my AI agent, to build, test, and publish practical software and engineering experiments.
+
+Tara works with me across development, research, and code review. Our [shared public workshop](https://projects.metaengineershub.com/) showcases browser-based tools, interactive experiments, and engineering prototypes developed through this collaboration. The public repository contains reviewed, independently deployable source, with private agent operations kept separate.
+
 **SIGDX** — a condition-monitoring dashboard for metro infrastructure, built independently.
 
 **[ProLifter](https://docs.prolifter.app/)** — commercial competition-management software for strength sports, built in C# and Unity. Handles competition setup, athlete and attempt management, role-specific live interfaces, results, multi-display operation, and recovery from interrupted competitions.
